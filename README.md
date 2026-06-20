@@ -10,11 +10,11 @@ Portal esportivo e responsivo (funciona no desktop e no celular), com cards envo
 
 | Jogos & Apostas | Chaveamento | Ranking |
 |---|---|---|
-| ![Jogos](docs/screenshots/jogos.svg) | ![Chaveamento](docs/screenshots/chaveamento.svg) | ![Ranking](docs/screenshots/ranking.svg) |
+| ![Jogos](docs/screenshots/jogos.png) | ![Chaveamento](docs/screenshots/chaveamento.png) | ![Ranking](docs/screenshots/ranking.png) |
 
 | Perfil & Conquistas | Painel Admin |
 |---|---|
-| ![Perfil](docs/screenshots/perfil.svg) | ![Admin](docs/screenshots/admin.svg) |
+| ![Perfil](docs/screenshots/perfil.png) | ![Admin](docs/screenshots/admin.png) |
 
 > As imagens acima são **placeholders**. Substitua os arquivos em `docs/screenshots/` pelas capturas reais do portal (mantenha os nomes ou troque para `.png` e atualize os links).
 
