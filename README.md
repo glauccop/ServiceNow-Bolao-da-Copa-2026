@@ -6,6 +6,20 @@ Portal esportivo e responsivo (funciona no desktop e no celular), com cards envo
 
 ---
 
+## 📸 Screenshots
+
+| Jogos & Apostas | Chaveamento | Ranking |
+|---|---|---|
+| ![Jogos](docs/screenshots/jogos.svg) | ![Chaveamento](docs/screenshots/chaveamento.svg) | ![Ranking](docs/screenshots/ranking.svg) |
+
+| Perfil & Conquistas | Painel Admin |
+|---|---|
+| ![Perfil](docs/screenshots/perfil.svg) | ![Admin](docs/screenshots/admin.svg) |
+
+> As imagens acima são **placeholders**. Substitua os arquivos em `docs/screenshots/` pelas capturas reais do portal (mantenha os nomes ou troque para `.png` e atualize os links).
+
+---
+
 ## ✨ Funcionalidades
 
 - **Aposta com payout**: cada palpite tem um valor apostado (estalecas).
@@ -148,6 +162,34 @@ Para ver o menu/portal e o painel admin, atribua a role ao usuário:
 
 ---
 
+## 📦 Datasets para download
+
+O dataset da Copa 2026 está disponível para baixar e reusar (livre):
+
+| Arquivo | Conteúdo | Download |
+|---|---|---|
+| `data/worldcup.json` | Fonte completa: 48 seleções + 87 jogos (grupos e mata-matas) | [baixar](https://raw.githubusercontent.com/glauccop/ServiceNow-Bolao-da-Copa-2026/main/data/worldcup.json) |
+| `data/teams.csv` | Seleções (`code,name,group,confederation,flag`) | [baixar](https://raw.githubusercontent.com/glauccop/ServiceNow-Bolao-da-Copa-2026/main/data/teams.csv) |
+| `data/matches.csv` | Jogos (`match_no,stage,group,home,away,kickoff,status,home_score,away_score,venue`) | [baixar](https://raw.githubusercontent.com/glauccop/ServiceNow-Bolao-da-Copa-2026/main/data/matches.csv) |
+
+Os CSVs são gerados a partir do JSON com:
+```bash
+node tools/export-csv.mjs
+```
+
+### Schema do `worldcup.json`
+```jsonc
+{
+  "teams":   [{ "code": "BRA", "name": "Brasil", "flag": "🇧🇷", "group": "C", "confederation": "CONMEBOL" }],
+  "matches": [{ "match_no": 1, "stage": "group", "group": "A", "home": "MEX", "away": "RSA",
+               "kickoff": "2026-06-11 20:00:00", "status": "finished", "home_score": 2, "away_score": 0,
+               "venue": "Estadio Azteca, Cidade do México" }]
+}
+```
+`stage`: `group | r16 | qf | sf | final` · `status`: `open | closed | finished` · jogos de mata-mata sem times definidos têm `home`/`away` ausentes.
+
+---
+
 ## 🔄 Atualizar os dados (times/jogos/resultados)
 
 1. Edite `data/worldcup.json` (seleções e/ou placares).
@@ -188,6 +230,17 @@ Cada `now-sdk install` gera um contexto de rollback. Para reverter, acesse na in
 - React 19 + Rollup (`@servicenow/isomorphic-rollup`)
 - TypeScript 5.5
 - REST Table API (`/api/now/table/...`)
+
+---
+
+## 👤 Autor
+
+**Glaucco Morais**
+
+- 📧 [glauccop@gmail.com](mailto:glauccop@gmail.com)
+- 💼 [linkedin.com/in/glaucco-morais](https://www.linkedin.com/in/glaucco-morais/)
+
+Ficou com dúvidas, sugestões ou quer trocar uma ideia sobre ServiceNow? Fique à vontade para me chamar!
 
 ---
 
