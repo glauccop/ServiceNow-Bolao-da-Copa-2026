@@ -1,0 +1,6 @@
+{
+  "scope": "x_snc_bolao_da_cop",
+  "scopeId": "c677cfe8f61a431f991bf65ddeb70376",
+  "name": "bolao da copa",
+  "tsconfigPath": "./src/server/tsconfig.json"
+}
